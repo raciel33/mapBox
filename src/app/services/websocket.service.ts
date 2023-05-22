@@ -19,6 +19,7 @@ export class WebsocketService {
     checkStatus() {
       this.socket.on('connect', () => {
         this.socketStatus = true;
+        console.log('conectado');
       });
       this.socket.on('disconnect', () => {
         this.socketStatus = false;
